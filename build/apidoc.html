@@ -46,11 +46,11 @@
     font-weight: bold;
 }
 </style>
-<h1>api-documentation for
+<h1>api documentation for
     <a
-        
+
         href="https://github.com/jprichardson/node-fs-extra"
-        
+
     >fs-extra (v2.1.2)</a>
 </h1>
 <h4>fs-extra contains methods that aren't included in the vanilla Node.js fs package. Such as mkdir -p, cp -r, and rm -rf.</h4>
@@ -58,1794 +58,1794 @@
     href="#apidoc.tableOfContents"
     id="apidoc.tableOfContents"
 ><h1>table of contents</h1></a><ol>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra">module fs-extra</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.FileReadStream">
             function <span class="apidocSignatureSpan">fs-extra.</span>FileReadStream
             <span class="apidocSignatureSpan">(path, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.FileWriteStream">
             function <span class="apidocSignatureSpan">fs-extra.</span>FileWriteStream
             <span class="apidocSignatureSpan">(path, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ReadStream">
             function <span class="apidocSignatureSpan">fs-extra.</span>ReadStream
             <span class="apidocSignatureSpan">(path, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.Stats">
             function <span class="apidocSignatureSpan">fs-extra.</span>Stats
             <span class="apidocSignatureSpan">( dev, mode, nlink, uid, gid, rdev, blksize, ino, size, blocks, atim_msec, mtim_msec, ctim_msec, birthtim_msec)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.WriteStream">
             function <span class="apidocSignatureSpan">fs-extra.</span>WriteStream
             <span class="apidocSignatureSpan">(path, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra._toUnixTimestamp">
             function <span class="apidocSignatureSpan">fs-extra.</span>_toUnixTimestamp
             <span class="apidocSignatureSpan">(time)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.access">
             function <span class="apidocSignatureSpan">fs-extra.</span>access
             <span class="apidocSignatureSpan">(path, mode, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.accessSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>accessSync
             <span class="apidocSignatureSpan">(path, mode)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.appendFile">
             function <span class="apidocSignatureSpan">fs-extra.</span>appendFile
             <span class="apidocSignatureSpan">(path, data, options, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.appendFileSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>appendFileSync
             <span class="apidocSignatureSpan">(path, data, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.chmod">
             function <span class="apidocSignatureSpan">fs-extra.</span>chmod
             <span class="apidocSignatureSpan">(target, mode, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.chmodSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>chmodSync
             <span class="apidocSignatureSpan">(target, mode)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.chown">
             function <span class="apidocSignatureSpan">fs-extra.</span>chown
             <span class="apidocSignatureSpan">(target, uid, gid, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.chownSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>chownSync
             <span class="apidocSignatureSpan">(target, uid, gid)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.close">
             function <span class="apidocSignatureSpan">fs-extra.</span>close
             <span class="apidocSignatureSpan">(fd, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.closeSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>closeSync
             <span class="apidocSignatureSpan">(fd)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.copy">
             function <span class="apidocSignatureSpan">fs-extra.</span>copy
             <span class="apidocSignatureSpan">(src, dest, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.copySync">
             function <span class="apidocSignatureSpan">fs-extra.</span>copySync
             <span class="apidocSignatureSpan">(src, dest, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.createFile">
             function <span class="apidocSignatureSpan">fs-extra.</span>createFile
             <span class="apidocSignatureSpan">(file, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.createFileSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>createFileSync
             <span class="apidocSignatureSpan">(file)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.createLink">
             function <span class="apidocSignatureSpan">fs-extra.</span>createLink
             <span class="apidocSignatureSpan">(srcpath, dstpath, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.createLinkSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>createLinkSync
             <span class="apidocSignatureSpan">(srcpath, dstpath, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.createReadStream">
             function <span class="apidocSignatureSpan">fs-extra.</span>createReadStream
             <span class="apidocSignatureSpan">(path, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.createSymlink">
             function <span class="apidocSignatureSpan">fs-extra.</span>createSymlink
             <span class="apidocSignatureSpan">(srcpath, dstpath, type, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.createSymlinkSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>createSymlinkSync
             <span class="apidocSignatureSpan">(srcpath, dstpath, type, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.createWriteStream">
             function <span class="apidocSignatureSpan">fs-extra.</span>createWriteStream
             <span class="apidocSignatureSpan">(path, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.emptyDir">
             function <span class="apidocSignatureSpan">fs-extra.</span>emptyDir
             <span class="apidocSignatureSpan">(dir, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.emptyDirSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>emptyDirSync
             <span class="apidocSignatureSpan">(dir)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.emptydir">
             function <span class="apidocSignatureSpan">fs-extra.</span>emptydir
             <span class="apidocSignatureSpan">(dir, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.emptydirSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>emptydirSync
             <span class="apidocSignatureSpan">(dir)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensureDir">
             function <span class="apidocSignatureSpan">fs-extra.</span>ensureDir
             <span class="apidocSignatureSpan">(p, opts, callback, made)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensureDirSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>ensureDirSync
             <span class="apidocSignatureSpan">(p, opts, made)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensureFile">
             function <span class="apidocSignatureSpan">fs-extra.</span>ensureFile
             <span class="apidocSignatureSpan">(file, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensureFileSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>ensureFileSync
             <span class="apidocSignatureSpan">(file)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensureLink">
             function <span class="apidocSignatureSpan">fs-extra.</span>ensureLink
             <span class="apidocSignatureSpan">(srcpath, dstpath, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensureLinkSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>ensureLinkSync
             <span class="apidocSignatureSpan">(srcpath, dstpath, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensureSymlink">
             function <span class="apidocSignatureSpan">fs-extra.</span>ensureSymlink
             <span class="apidocSignatureSpan">(srcpath, dstpath, type, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensureSymlinkSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>ensureSymlinkSync
             <span class="apidocSignatureSpan">(srcpath, dstpath, type, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.exists">
             function <span class="apidocSignatureSpan">fs-extra.</span>exists
             <span class="apidocSignatureSpan">(path, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.existsSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>existsSync
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.fchmod">
             function <span class="apidocSignatureSpan">fs-extra.</span>fchmod
             <span class="apidocSignatureSpan">(target, mode, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.fchmodSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>fchmodSync
             <span class="apidocSignatureSpan">(target, mode)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.fchown">
             function <span class="apidocSignatureSpan">fs-extra.</span>fchown
             <span class="apidocSignatureSpan">(target, uid, gid, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.fchownSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>fchownSync
             <span class="apidocSignatureSpan">(target, uid, gid)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.fdatasync">
             function <span class="apidocSignatureSpan">fs-extra.</span>fdatasync
             <span class="apidocSignatureSpan">(fd, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.fdatasyncSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>fdatasyncSync
             <span class="apidocSignatureSpan">(fd)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.fstat">
             function <span class="apidocSignatureSpan">fs-extra.</span>fstat
             <span class="apidocSignatureSpan">(target, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.fstatSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>fstatSync
             <span class="apidocSignatureSpan">(target)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.fsync">
             function <span class="apidocSignatureSpan">fs-extra.</span>fsync
             <span class="apidocSignatureSpan">(fd, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.fsyncSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>fsyncSync
             <span class="apidocSignatureSpan">(fd)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ftruncate">
             function <span class="apidocSignatureSpan">fs-extra.</span>ftruncate
             <span class="apidocSignatureSpan">(fd, len, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ftruncateSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>ftruncateSync
             <span class="apidocSignatureSpan">(fd, len)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.futimes">
             function <span class="apidocSignatureSpan">fs-extra.</span>futimes
             <span class="apidocSignatureSpan">(fd, atime, mtime, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.futimesSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>futimesSync
             <span class="apidocSignatureSpan">(fd, atime, mtime)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.gracefulify">
             function <span class="apidocSignatureSpan">fs-extra.</span>gracefulify
             <span class="apidocSignatureSpan">(fs)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.lchmod">
             function <span class="apidocSignatureSpan">fs-extra.</span>lchmod
             <span class="apidocSignatureSpan">(path, mode, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.lchmodSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>lchmodSync
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.lchown">
             function <span class="apidocSignatureSpan">fs-extra.</span>lchown
             <span class="apidocSignatureSpan">(path, uid, gid, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.lchownSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>lchownSync
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.link">
             function <span class="apidocSignatureSpan">fs-extra.</span>link
             <span class="apidocSignatureSpan">(existingPath, newPath, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.linkSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>linkSync
             <span class="apidocSignatureSpan">(existingPath, newPath)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.lstat">
             function <span class="apidocSignatureSpan">fs-extra.</span>lstat
             <span class="apidocSignatureSpan">(target, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.lstatSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>lstatSync
             <span class="apidocSignatureSpan">(target)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.lutimes">
             function <span class="apidocSignatureSpan">fs-extra.</span>lutimes
             <span class="apidocSignatureSpan">(_a, _b, _c, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.lutimesSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>lutimesSync
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.mkdir">
             function <span class="apidocSignatureSpan">fs-extra.</span>mkdir
             <span class="apidocSignatureSpan">(path, mode, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.mkdirSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>mkdirSync
             <span class="apidocSignatureSpan">(path, mode)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.mkdirp">
             function <span class="apidocSignatureSpan">fs-extra.</span>mkdirp
             <span class="apidocSignatureSpan">(p, opts, callback, made)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.mkdirpSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>mkdirpSync
             <span class="apidocSignatureSpan">(p, opts, made)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.mkdirs">
             function <span class="apidocSignatureSpan">fs-extra.</span>mkdirs
             <span class="apidocSignatureSpan">(p, opts, callback, made)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.mkdirsSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>mkdirsSync
             <span class="apidocSignatureSpan">(p, opts, made)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.mkdtemp">
             function <span class="apidocSignatureSpan">fs-extra.</span>mkdtemp
             <span class="apidocSignatureSpan">(prefix, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.mkdtempSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>mkdtempSync
             <span class="apidocSignatureSpan">(prefix, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.move">
             function <span class="apidocSignatureSpan">fs-extra.</span>move
             <span class="apidocSignatureSpan">(source, dest, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.moveSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>moveSync
             <span class="apidocSignatureSpan">(src, dest, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.open">
             function <span class="apidocSignatureSpan">fs-extra.</span>open
             <span class="apidocSignatureSpan">(path, flags, mode, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.openSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>openSync
             <span class="apidocSignatureSpan">(path, flags, mode)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.outputFile">
             function <span class="apidocSignatureSpan">fs-extra.</span>outputFile
             <span class="apidocSignatureSpan">(file, data, encoding, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.outputFileSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>outputFileSync
             <span class="apidocSignatureSpan">(file, data, encoding)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.outputJSON">
             function <span class="apidocSignatureSpan">fs-extra.</span>outputJSON
             <span class="apidocSignatureSpan">(file, data, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.outputJSONSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>outputJSONSync
             <span class="apidocSignatureSpan">(file, data, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.outputJson">
             function <span class="apidocSignatureSpan">fs-extra.</span>outputJson
             <span class="apidocSignatureSpan">(file, data, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.outputJsonSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>outputJsonSync
             <span class="apidocSignatureSpan">(file, data, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.read">
             function <span class="apidocSignatureSpan">fs-extra.</span>read
             <span class="apidocSignatureSpan">(fd, buffer, offset, length, position, callback_)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.readFile">
             function <span class="apidocSignatureSpan">fs-extra.</span>readFile
             <span class="apidocSignatureSpan">(path, options, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.readFileSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>readFileSync
             <span class="apidocSignatureSpan">(path, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.readJSON">
             function <span class="apidocSignatureSpan">fs-extra.</span>readJSON
             <span class="apidocSignatureSpan">(file, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.readJSONSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>readJSONSync
             <span class="apidocSignatureSpan">(file, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.readJson">
             function <span class="apidocSignatureSpan">fs-extra.</span>readJson
             <span class="apidocSignatureSpan">(file, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.readJsonSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>readJsonSync
             <span class="apidocSignatureSpan">(file, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.readSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>readSync
             <span class="apidocSignatureSpan">(fd, buffer, offset, length, position)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.readdir">
             function <span class="apidocSignatureSpan">fs-extra.</span>readdir
             <span class="apidocSignatureSpan">(path, options, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.readdirSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>readdirSync
             <span class="apidocSignatureSpan">(path, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.readlink">
             function <span class="apidocSignatureSpan">fs-extra.</span>readlink
             <span class="apidocSignatureSpan">(path, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.readlinkSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>readlinkSync
             <span class="apidocSignatureSpan">(path, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.realpath">
             function <span class="apidocSignatureSpan">fs-extra.</span>realpath
             <span class="apidocSignatureSpan">(p, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.realpathSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>realpathSync
             <span class="apidocSignatureSpan">(p, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.remove">
             function <span class="apidocSignatureSpan">fs-extra.</span>remove
             <span class="apidocSignatureSpan">(dir, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.removeSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>removeSync
             <span class="apidocSignatureSpan">(dir)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.rename">
             function <span class="apidocSignatureSpan">fs-extra.</span>rename
             <span class="apidocSignatureSpan">(oldPath, newPath, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.renameSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>renameSync
             <span class="apidocSignatureSpan">(oldPath, newPath)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.rmdir">
             function <span class="apidocSignatureSpan">fs-extra.</span>rmdir
             <span class="apidocSignatureSpan">(path, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.rmdirSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>rmdirSync
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.stat">
             function <span class="apidocSignatureSpan">fs-extra.</span>stat
             <span class="apidocSignatureSpan">(target, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.statSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>statSync
             <span class="apidocSignatureSpan">(target)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.symlink">
             function <span class="apidocSignatureSpan">fs-extra.</span>symlink
             <span class="apidocSignatureSpan">(target, path, type_, callback_)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.symlinkSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>symlinkSync
             <span class="apidocSignatureSpan">(target, path, type)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.truncate">
             function <span class="apidocSignatureSpan">fs-extra.</span>truncate
             <span class="apidocSignatureSpan">(path, len, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.truncateSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>truncateSync
             <span class="apidocSignatureSpan">(path, len)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.unlink">
             function <span class="apidocSignatureSpan">fs-extra.</span>unlink
             <span class="apidocSignatureSpan">(path, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.unlinkSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>unlinkSync
             <span class="apidocSignatureSpan">(path)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.unwatchFile">
             function <span class="apidocSignatureSpan">fs-extra.</span>unwatchFile
             <span class="apidocSignatureSpan">(filename, listener)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.utimes">
             function <span class="apidocSignatureSpan">fs-extra.</span>utimes
             <span class="apidocSignatureSpan">(path, atime, mtime, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.utimesSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>utimesSync
             <span class="apidocSignatureSpan">(path, atime, mtime)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.watch">
             function <span class="apidocSignatureSpan">fs-extra.</span>watch
             <span class="apidocSignatureSpan">(filename, options, listener)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.watchFile">
             function <span class="apidocSignatureSpan">fs-extra.</span>watchFile
             <span class="apidocSignatureSpan">(filename, options, listener)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.write">
             function <span class="apidocSignatureSpan">fs-extra.</span>write
             <span class="apidocSignatureSpan">(fd, buffer, offset, length, position, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.writeFile">
             function <span class="apidocSignatureSpan">fs-extra.</span>writeFile
             <span class="apidocSignatureSpan">(path, data, options, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.writeFileSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>writeFileSync
             <span class="apidocSignatureSpan">(path, data, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.writeJSON">
             function <span class="apidocSignatureSpan">fs-extra.</span>writeJSON
             <span class="apidocSignatureSpan">(file, obj, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.writeJSONSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>writeJSONSync
             <span class="apidocSignatureSpan">(file, obj, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.writeJson">
             function <span class="apidocSignatureSpan">fs-extra.</span>writeJson
             <span class="apidocSignatureSpan">(file, obj, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.writeJsonSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>writeJsonSync
             <span class="apidocSignatureSpan">(file, obj, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.writeSync">
             function <span class="apidocSignatureSpan">fs-extra.</span>writeSync
             <span class="apidocSignatureSpan">(fd, buffer, offset, length, position)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fs-extra.</span>F_OK</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fs-extra.</span>R_OK</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fs-extra.</span>W_OK</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fs-extra.</span>X_OK</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fs-extra.</span>spaces</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fs-extra.</span>ReadStream.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fs-extra.</span>Stats.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fs-extra.</span>WriteStream.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fs-extra.</span>constants</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fs-extra.</span>copy_sync</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fs-extra.</span>empty</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fs-extra.</span>ensure</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fs-extra.</span>json</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fs-extra.</span>jsonfile</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fs-extra.</span>move_sync</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fs-extra.</span>output</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.ReadStream">module fs-extra.ReadStream</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ReadStream.ReadStream">
             function <span class="apidocSignatureSpan">fs-extra.</span>ReadStream
             <span class="apidocSignatureSpan">(path, options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.ReadStream.prototype">module fs-extra.ReadStream.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ReadStream.prototype.open">
             function <span class="apidocSignatureSpan">fs-extra.ReadStream.prototype.</span>open
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.Stats">module fs-extra.Stats</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.Stats.Stats">
             function <span class="apidocSignatureSpan">fs-extra.</span>Stats
             <span class="apidocSignatureSpan">( dev, mode, nlink, uid, gid, rdev, blksize, ino, size, blocks, atim_msec, mtim_msec, ctim_msec, birthtim_msec)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.Stats.prototype">module fs-extra.Stats.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.Stats.prototype._checkModeProperty">
             function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>_checkModeProperty
             <span class="apidocSignatureSpan">(property)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.Stats.prototype.isBlockDevice">
             function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>isBlockDevice
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.Stats.prototype.isCharacterDevice">
             function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>isCharacterDevice
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.Stats.prototype.isDirectory">
             function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>isDirectory
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.Stats.prototype.isFIFO">
             function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>isFIFO
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.Stats.prototype.isFile">
             function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>isFile
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.Stats.prototype.isSocket">
             function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>isSocket
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.Stats.prototype.isSymbolicLink">
             function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>isSymbolicLink
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.WriteStream">module fs-extra.WriteStream</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.WriteStream.WriteStream">
             function <span class="apidocSignatureSpan">fs-extra.</span>WriteStream
             <span class="apidocSignatureSpan">(path, options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.WriteStream.prototype">module fs-extra.WriteStream.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.WriteStream.prototype.open">
             function <span class="apidocSignatureSpan">fs-extra.WriteStream.prototype.</span>open
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.copy">module fs-extra.copy</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.copy.copy">
             function <span class="apidocSignatureSpan">fs-extra.</span>copy
             <span class="apidocSignatureSpan">(src, dest, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.copy_sync">module fs-extra.copy_sync</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.copy_sync.copySync">
             function <span class="apidocSignatureSpan">fs-extra.copy_sync.</span>copySync
             <span class="apidocSignatureSpan">(src, dest, options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.empty">module fs-extra.empty</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.empty.emptyDir">
             function <span class="apidocSignatureSpan">fs-extra.empty.</span>emptyDir
             <span class="apidocSignatureSpan">(dir, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.empty.emptyDirSync">
             function <span class="apidocSignatureSpan">fs-extra.empty.</span>emptyDirSync
             <span class="apidocSignatureSpan">(dir)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.empty.emptydir">
             function <span class="apidocSignatureSpan">fs-extra.empty.</span>emptydir
             <span class="apidocSignatureSpan">(dir, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.empty.emptydirSync">
             function <span class="apidocSignatureSpan">fs-extra.empty.</span>emptydirSync
             <span class="apidocSignatureSpan">(dir)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.ensure">module fs-extra.ensure</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensure.createFile">
             function <span class="apidocSignatureSpan">fs-extra.ensure.</span>createFile
             <span class="apidocSignatureSpan">(file, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensure.createFileSync">
             function <span class="apidocSignatureSpan">fs-extra.ensure.</span>createFileSync
             <span class="apidocSignatureSpan">(file)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensure.createLink">
             function <span class="apidocSignatureSpan">fs-extra.ensure.</span>createLink
             <span class="apidocSignatureSpan">(srcpath, dstpath, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensure.createLinkSync">
             function <span class="apidocSignatureSpan">fs-extra.ensure.</span>createLinkSync
             <span class="apidocSignatureSpan">(srcpath, dstpath, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensure.createSymlink">
             function <span class="apidocSignatureSpan">fs-extra.ensure.</span>createSymlink
             <span class="apidocSignatureSpan">(srcpath, dstpath, type, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensure.createSymlinkSync">
             function <span class="apidocSignatureSpan">fs-extra.ensure.</span>createSymlinkSync
             <span class="apidocSignatureSpan">(srcpath, dstpath, type, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensure.ensureFile">
             function <span class="apidocSignatureSpan">fs-extra.ensure.</span>ensureFile
             <span class="apidocSignatureSpan">(file, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensure.ensureFileSync">
             function <span class="apidocSignatureSpan">fs-extra.ensure.</span>ensureFileSync
             <span class="apidocSignatureSpan">(file)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensure.ensureLink">
             function <span class="apidocSignatureSpan">fs-extra.ensure.</span>ensureLink
             <span class="apidocSignatureSpan">(srcpath, dstpath, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensure.ensureLinkSync">
             function <span class="apidocSignatureSpan">fs-extra.ensure.</span>ensureLinkSync
             <span class="apidocSignatureSpan">(srcpath, dstpath, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensure.ensureSymlink">
             function <span class="apidocSignatureSpan">fs-extra.ensure.</span>ensureSymlink
             <span class="apidocSignatureSpan">(srcpath, dstpath, type, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.ensure.ensureSymlinkSync">
             function <span class="apidocSignatureSpan">fs-extra.ensure.</span>ensureSymlinkSync
             <span class="apidocSignatureSpan">(srcpath, dstpath, type, callback)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.json">module fs-extra.json</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.json.outputJSON">
             function <span class="apidocSignatureSpan">fs-extra.json.</span>outputJSON
             <span class="apidocSignatureSpan">(file, data, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.json.outputJSONSync">
             function <span class="apidocSignatureSpan">fs-extra.json.</span>outputJSONSync
             <span class="apidocSignatureSpan">(file, data, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.json.outputJson">
             function <span class="apidocSignatureSpan">fs-extra.json.</span>outputJson
             <span class="apidocSignatureSpan">(file, data, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.json.outputJsonSync">
             function <span class="apidocSignatureSpan">fs-extra.json.</span>outputJsonSync
             <span class="apidocSignatureSpan">(file, data, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.json.readJSON">
             function <span class="apidocSignatureSpan">fs-extra.json.</span>readJSON
             <span class="apidocSignatureSpan">(file, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.json.readJSONSync">
             function <span class="apidocSignatureSpan">fs-extra.json.</span>readJSONSync
             <span class="apidocSignatureSpan">(file, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.json.readJson">
             function <span class="apidocSignatureSpan">fs-extra.json.</span>readJson
             <span class="apidocSignatureSpan">(file, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.json.readJsonSync">
             function <span class="apidocSignatureSpan">fs-extra.json.</span>readJsonSync
             <span class="apidocSignatureSpan">(file, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.json.writeJSON">
             function <span class="apidocSignatureSpan">fs-extra.json.</span>writeJSON
             <span class="apidocSignatureSpan">(file, obj, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.json.writeJSONSync">
             function <span class="apidocSignatureSpan">fs-extra.json.</span>writeJSONSync
             <span class="apidocSignatureSpan">(file, obj, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.json.writeJson">
             function <span class="apidocSignatureSpan">fs-extra.json.</span>writeJson
             <span class="apidocSignatureSpan">(file, obj, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.json.writeJsonSync">
             function <span class="apidocSignatureSpan">fs-extra.json.</span>writeJsonSync
             <span class="apidocSignatureSpan">(file, obj, options)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">fs-extra.json.</span>spaces</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.mkdirs">module fs-extra.mkdirs</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.mkdirs.mkdirs">
             function <span class="apidocSignatureSpan">fs-extra.</span>mkdirs
             <span class="apidocSignatureSpan">(p, opts, callback, made)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.mkdirs.ensureDir">
             function <span class="apidocSignatureSpan">fs-extra.mkdirs.</span>ensureDir
             <span class="apidocSignatureSpan">(p, opts, callback, made)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.mkdirs.ensureDirSync">
             function <span class="apidocSignatureSpan">fs-extra.mkdirs.</span>ensureDirSync
             <span class="apidocSignatureSpan">(p, opts, made)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.mkdirs.mkdirp">
             function <span class="apidocSignatureSpan">fs-extra.mkdirs.</span>mkdirp
             <span class="apidocSignatureSpan">(p, opts, callback, made)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.mkdirs.mkdirpSync">
             function <span class="apidocSignatureSpan">fs-extra.mkdirs.</span>mkdirpSync
             <span class="apidocSignatureSpan">(p, opts, made)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.mkdirs.mkdirsSync">
             function <span class="apidocSignatureSpan">fs-extra.mkdirs.</span>mkdirsSync
             <span class="apidocSignatureSpan">(p, opts, made)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.move">module fs-extra.move</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.move.move">
             function <span class="apidocSignatureSpan">fs-extra.</span>move
             <span class="apidocSignatureSpan">(source, dest, options, callback)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.move_sync">module fs-extra.move_sync</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.move_sync.moveSync">
             function <span class="apidocSignatureSpan">fs-extra.move_sync.</span>moveSync
             <span class="apidocSignatureSpan">(src, dest, options)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.output">module fs-extra.output</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.output.outputFile">
             function <span class="apidocSignatureSpan">fs-extra.output.</span>outputFile
             <span class="apidocSignatureSpan">(file, data, encoding, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.output.outputFileSync">
             function <span class="apidocSignatureSpan">fs-extra.output.</span>outputFileSync
             <span class="apidocSignatureSpan">(file, data, encoding)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.fs-extra.remove">module fs-extra.remove</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.remove.remove">
             function <span class="apidocSignatureSpan">fs-extra.</span>remove
             <span class="apidocSignatureSpan">(dir, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.fs-extra.remove.removeSync">
             function <span class="apidocSignatureSpan">fs-extra.remove.</span>removeSync
             <span class="apidocSignatureSpan">(dir)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra" id="apidoc.module.fs-extra">module fs-extra</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.FileReadStream" id="apidoc.element.fs-extra.FileReadStream">
         function <span class="apidocSignatureSpan">fs-extra.</span>FileReadStream
@@ -1861,9 +1861,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.FileWriteStream" id="apidoc.element.fs-extra.FileWriteStream">
         function <span class="apidocSignatureSpan">fs-extra.</span>FileWriteStream
@@ -1879,9 +1879,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ReadStream" id="apidoc.element.fs-extra.ReadStream">
         function <span class="apidocSignatureSpan">fs-extra.</span>ReadStream
@@ -1897,9 +1897,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.Stats" id="apidoc.element.fs-extra.Stats">
         function <span class="apidocSignatureSpan">fs-extra.</span>Stats
@@ -1925,9 +1925,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.WriteStream" id="apidoc.element.fs-extra.WriteStream">
         function <span class="apidocSignatureSpan">fs-extra.</span>WriteStream
@@ -1943,9 +1943,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra._toUnixTimestamp" id="apidoc.element.fs-extra._toUnixTimestamp">
         function <span class="apidocSignatureSpan">fs-extra.</span>_toUnixTimestamp
@@ -1971,9 +1971,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.access" id="apidoc.element.fs-extra.access">
         function <span class="apidocSignatureSpan">fs-extra.</span>access
@@ -2002,9 +2002,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.accessSync" id="apidoc.element.fs-extra.accessSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>accessSync
@@ -2025,9 +2025,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.appendFile" id="apidoc.element.fs-extra.appendFile">
         function <span class="apidocSignatureSpan">fs-extra.</span>appendFile
@@ -2055,9 +2055,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.appendFileSync" id="apidoc.element.fs-extra.appendFileSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>appendFileSync
@@ -2079,9 +2079,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.chmod" id="apidoc.element.fs-extra.chmod">
         function <span class="apidocSignatureSpan">fs-extra.</span>chmod
@@ -2097,9 +2097,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.chmodSync" id="apidoc.element.fs-extra.chmodSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>chmodSync
@@ -2116,9 +2116,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.chown" id="apidoc.element.fs-extra.chown">
         function <span class="apidocSignatureSpan">fs-extra.</span>chown
@@ -2138,29 +2138,29 @@
 * https://github.com/ryanmcgrath/wrench-js/issues/29
 * https://github.com/substack/node-mkdirp/issues/17
 
-First, I believe that in as many cases as possible, the [Node.js naming schemes](http://nodejs.org/api/fs.html) should be chosen\
+First, I believe that in as many cases as possible, the [Node.js naming schemes](http://nodejs.org/api/fs.html) should be chosen
 . However, there are problems with the Node.js own naming schemes.
 
-For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. P\
-erhaps a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I beli\
-eve is great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.<span class="apidocCodeKeywordSpan">chown</span>()`, etc.
+For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. Perhaps
+ a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I believe is
+ great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.<span class="apidocCodeKeywordSpan">chown</span>()`, etc.
 
-We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir \
--p`, and `rm -rf`?
+We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir -
+p`, and `rm -rf`?
 
-My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and fil\
-es. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all o\
-f its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, \
-then in most cases you&#x27;ll want to create that too.
+My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and files
+. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all of
+its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, then
+ in most cases you&#x27;ll want to create that too.
 
-So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want \
-to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directo\
-ry regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.mkdirp(path)`.
+So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want
+to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directory
+ regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.mkdirp(path)`.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.chownSync" id="apidoc.element.fs-extra.chownSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>chownSync
@@ -2177,9 +2177,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.close" id="apidoc.element.fs-extra.close">
         function <span class="apidocSignatureSpan">fs-extra.</span>close
@@ -2198,9 +2198,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.closeSync" id="apidoc.element.fs-extra.closeSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>closeSync
@@ -2217,9 +2217,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.copy" id="apidoc.element.fs-extra.copy">
         function <span class="apidocSignatureSpan">fs-extra.</span>copy
@@ -2288,9 +2288,9 @@ fs.copySync(&#x27;/tmp/myfile&#x27;, &#x27;/tmp/mynewfile&#x27;)
 console.log(&#x22;success!&#x22;)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.copySync" id="apidoc.element.fs-extra.copySync">
         function <span class="apidocSignatureSpan">fs-extra.</span>copySync
@@ -2367,9 +2367,9 @@ try {
 ```
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.createFile" id="apidoc.element.fs-extra.createFile">
         function <span class="apidocSignatureSpan">fs-extra.</span>createFile
@@ -2399,9 +2399,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.createFileSync" id="apidoc.element.fs-extra.createFileSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>createFileSync
@@ -2421,9 +2421,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.createLink" id="apidoc.element.fs-extra.createLink">
         function <span class="apidocSignatureSpan">fs-extra.</span>createLink
@@ -2460,9 +2460,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.createLinkSync" id="apidoc.element.fs-extra.createLinkSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>createLinkSync
@@ -2490,9 +2490,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.createReadStream" id="apidoc.element.fs-extra.createReadStream">
         function <span class="apidocSignatureSpan">fs-extra.</span>createReadStream
@@ -2505,9 +2505,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.createSymlink" id="apidoc.element.fs-extra.createSymlink">
         function <span class="apidocSignatureSpan">fs-extra.</span>createSymlink
@@ -2540,9 +2540,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.createSymlinkSync" id="apidoc.element.fs-extra.createSymlinkSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>createSymlinkSync
@@ -2568,9 +2568,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.createWriteStream" id="apidoc.element.fs-extra.createWriteStream">
         function <span class="apidocSignatureSpan">fs-extra.</span>createWriteStream
@@ -2583,9 +2583,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.emptyDir" id="apidoc.element.fs-extra.emptyDir">
         function <span class="apidocSignatureSpan">fs-extra.</span>emptyDir
@@ -2614,9 +2614,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.emptyDirSync" id="apidoc.element.fs-extra.emptyDirSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>emptyDirSync
@@ -2639,9 +2639,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.emptydir" id="apidoc.element.fs-extra.emptydir">
         function <span class="apidocSignatureSpan">fs-extra.</span>emptydir
@@ -2670,9 +2670,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.emptydirSync" id="apidoc.element.fs-extra.emptydirSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>emptydirSync
@@ -2695,9 +2695,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensureDir" id="apidoc.element.fs-extra.ensureDir">
         function <span class="apidocSignatureSpan">fs-extra.</span>ensureDir
@@ -2760,9 +2760,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensureDirSync" id="apidoc.element.fs-extra.ensureDirSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>ensureDirSync
@@ -2821,9 +2821,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensureFile" id="apidoc.element.fs-extra.ensureFile">
         function <span class="apidocSignatureSpan">fs-extra.</span>ensureFile
@@ -2853,9 +2853,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensureFileSync" id="apidoc.element.fs-extra.ensureFileSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>ensureFileSync
@@ -2875,9 +2875,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensureLink" id="apidoc.element.fs-extra.ensureLink">
         function <span class="apidocSignatureSpan">fs-extra.</span>ensureLink
@@ -2914,9 +2914,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensureLinkSync" id="apidoc.element.fs-extra.ensureLinkSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>ensureLinkSync
@@ -2944,9 +2944,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensureSymlink" id="apidoc.element.fs-extra.ensureSymlink">
         function <span class="apidocSignatureSpan">fs-extra.</span>ensureSymlink
@@ -2979,9 +2979,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensureSymlinkSync" id="apidoc.element.fs-extra.ensureSymlinkSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>ensureSymlinkSync
@@ -3007,9 +3007,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.exists" id="apidoc.element.fs-extra.exists">
         function <span class="apidocSignatureSpan">fs-extra.</span>exists
@@ -3030,9 +3030,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.existsSync" id="apidoc.element.fs-extra.existsSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>existsSync
@@ -3052,9 +3052,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.fchmod" id="apidoc.element.fs-extra.fchmod">
         function <span class="apidocSignatureSpan">fs-extra.</span>fchmod
@@ -3070,9 +3070,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.fchmodSync" id="apidoc.element.fs-extra.fchmodSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>fchmodSync
@@ -3089,9 +3089,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.fchown" id="apidoc.element.fs-extra.fchown">
         function <span class="apidocSignatureSpan">fs-extra.</span>fchown
@@ -3107,9 +3107,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.fchownSync" id="apidoc.element.fs-extra.fchownSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>fchownSync
@@ -3126,9 +3126,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.fdatasync" id="apidoc.element.fs-extra.fdatasync">
         function <span class="apidocSignatureSpan">fs-extra.</span>fdatasync
@@ -3143,9 +3143,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.fdatasyncSync" id="apidoc.element.fs-extra.fdatasyncSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>fdatasyncSync
@@ -3158,9 +3158,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.fstat" id="apidoc.element.fs-extra.fstat">
         function <span class="apidocSignatureSpan">fs-extra.</span>fstat
@@ -3178,9 +3178,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.fstatSync" id="apidoc.element.fs-extra.fstatSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>fstatSync
@@ -3196,9 +3196,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.fsync" id="apidoc.element.fs-extra.fsync">
         function <span class="apidocSignatureSpan">fs-extra.</span>fsync
@@ -3213,9 +3213,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.fsyncSync" id="apidoc.element.fs-extra.fsyncSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>fsyncSync
@@ -3228,9 +3228,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ftruncate" id="apidoc.element.fs-extra.ftruncate">
         function <span class="apidocSignatureSpan">fs-extra.</span>ftruncate
@@ -3251,9 +3251,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ftruncateSync" id="apidoc.element.fs-extra.ftruncateSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>ftruncateSync
@@ -3269,9 +3269,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.futimes" id="apidoc.element.fs-extra.futimes">
         function <span class="apidocSignatureSpan">fs-extra.</span>futimes
@@ -3288,9 +3288,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.futimesSync" id="apidoc.element.fs-extra.futimesSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>futimesSync
@@ -3305,9 +3305,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.gracefulify" id="apidoc.element.fs-extra.gracefulify">
         function <span class="apidocSignatureSpan">fs-extra.</span>gracefulify
@@ -3465,9 +3465,9 @@ try {
       return W ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.lchmod" id="apidoc.element.fs-extra.lchmod">
         function <span class="apidocSignatureSpan">fs-extra.</span>lchmod
@@ -3480,9 +3480,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.lchmodSync" id="apidoc.element.fs-extra.lchmodSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>lchmodSync
@@ -3493,9 +3493,9 @@ try {
     <li>description and source-code<pre class="apidocCodePre">lchmodSync = function () {}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.lchown" id="apidoc.element.fs-extra.lchown">
         function <span class="apidocSignatureSpan">fs-extra.</span>lchown
@@ -3508,9 +3508,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.lchownSync" id="apidoc.element.fs-extra.lchownSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>lchownSync
@@ -3521,9 +3521,9 @@ try {
     <li>description and source-code<pre class="apidocCodePre">lchownSync = function () {}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.link" id="apidoc.element.fs-extra.link">
         function <span class="apidocSignatureSpan">fs-extra.</span>link
@@ -3552,9 +3552,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.linkSync" id="apidoc.element.fs-extra.linkSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>linkSync
@@ -3572,9 +3572,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.lstat" id="apidoc.element.fs-extra.lstat">
         function <span class="apidocSignatureSpan">fs-extra.</span>lstat
@@ -3592,9 +3592,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.lstatSync" id="apidoc.element.fs-extra.lstatSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>lstatSync
@@ -3610,9 +3610,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.lutimes" id="apidoc.element.fs-extra.lutimes">
         function <span class="apidocSignatureSpan">fs-extra.</span>lutimes
@@ -3623,9 +3623,9 @@ try {
     <li>description and source-code<pre class="apidocCodePre">lutimes = function (_a, _b, _c, cb) { if (cb) process.nextTick(cb) }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.lutimesSync" id="apidoc.element.fs-extra.lutimesSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>lutimesSync
@@ -3636,9 +3636,9 @@ try {
     <li>description and source-code<pre class="apidocCodePre">lutimesSync = function () {}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.mkdir" id="apidoc.element.fs-extra.mkdir">
         function <span class="apidocSignatureSpan">fs-extra.</span>mkdir
@@ -3664,29 +3664,29 @@ try {
 * https://github.com/ryanmcgrath/wrench-js/issues/29
 * https://github.com/substack/node-mkdirp/issues/17
 
-First, I believe that in as many cases as possible, the [Node.js naming schemes](http://nodejs.org/api/fs.html) should be chosen\
+First, I believe that in as many cases as possible, the [Node.js naming schemes](http://nodejs.org/api/fs.html) should be chosen
 . However, there are problems with the Node.js own naming schemes.
 
-For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. P\
-erhaps a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I beli\
-eve is great. See: `fs.<span class="apidocCodeKeywordSpan">mkdir</span>()`, `fs.rmdir()`, `fs.chown()`, etc.
+For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. Perhaps
+ a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I believe is
+ great. See: `fs.<span class="apidocCodeKeywordSpan">mkdir</span>()`, `fs.rmdir()`, `fs.chown()`, etc.
 
-We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir \
--p`, and `rm -rf`?
+We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir -
+p`, and `rm -rf`?
 
-My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and fil\
-es. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all o\
-f its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, \
-then in most cases you&#x27;ll want to create that too.
+My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and files
+. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all of
+its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, then
+ in most cases you&#x27;ll want to create that too.
 
-So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want \
-to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directo\
-ry regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.mkdirp(path)`.
+So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want
+to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directory
+ regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.mkdirp(path)`.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.mkdirSync" id="apidoc.element.fs-extra.mkdirSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>mkdirSync
@@ -3702,9 +3702,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.mkdirp" id="apidoc.element.fs-extra.mkdirp">
         function <span class="apidocSignatureSpan">fs-extra.</span>mkdirp
@@ -3767,22 +3767,22 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. P\
-erhaps a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I beli\
-eve is great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
+For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. Perhaps
+ a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I believe is
+ great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
 
-We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir \
--p`, and `rm -rf`?
+We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir -
+p`, and `rm -rf`?
 
-My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and fil\
-es. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all o\
-f its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, \
-then in most cases you&#x27;ll want to create that too.
+My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and files
+. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all of
+its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, then
+ in most cases you&#x27;ll want to create that too.
 
-So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want \
-to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directo\
-ry regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.<span class="apidocCodeKeywordSpan">mk\
-dirp</span>(path)`.
+So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want
+to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directory
+ regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.<span class="apidocCodeKeywordSpan">mkdirp
+</span>(path)`.
 
 
 Credit
@@ -3791,9 +3791,9 @@ Credit
 `fs-extra` wouldn&#x27;t be possible without using the modules from the following authors:
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.mkdirpSync" id="apidoc.element.fs-extra.mkdirpSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>mkdirpSync
@@ -3852,9 +3852,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.mkdirs" id="apidoc.element.fs-extra.mkdirs">
         function <span class="apidocSignatureSpan">fs-extra.</span>mkdirs
@@ -3917,22 +3917,22 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. P\
-erhaps a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I beli\
-eve is great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
+For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. Perhaps
+ a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I believe is
+ great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
 
-We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir \
--p`, and `rm -rf`?
+We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir -
+p`, and `rm -rf`?
 
-My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and fil\
-es. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all o\
-f its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, \
-then in most cases you&#x27;ll want to create that too.
+My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and files
+. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all of
+its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, then
+ in most cases you&#x27;ll want to create that too.
 
-So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want \
-to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directo\
-ry regardless of whether its parent directories exist, just call `fs.<span class="apidocCodeKeywordSpan">mkdirs</span>(path)` or\
- `fs.mkdirp(path)`.
+So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want
+to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directory
+ regardless of whether its parent directories exist, just call `fs.<span class="apidocCodeKeywordSpan">mkdirs</span>(path)` or `
+fs.mkdirp(path)`.
 
 
 Credit
@@ -3941,9 +3941,9 @@ Credit
 `fs-extra` wouldn&#x27;t be possible without using the modules from the following authors:
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.mkdirsSync" id="apidoc.element.fs-extra.mkdirsSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>mkdirsSync
@@ -4002,9 +4002,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.mkdtemp" id="apidoc.element.fs-extra.mkdtemp">
         function <span class="apidocSignatureSpan">fs-extra.</span>mkdtemp
@@ -4028,9 +4028,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.mkdtempSync" id="apidoc.element.fs-extra.mkdtempSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>mkdtempSync
@@ -4047,9 +4047,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.move" id="apidoc.element.fs-extra.move">
         function <span class="apidocSignatureSpan">fs-extra.</span>move
@@ -4127,9 +4127,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.moveSync" id="apidoc.element.fs-extra.moveSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>moveSync
@@ -4180,9 +4180,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.open" id="apidoc.element.fs-extra.open">
         function <span class="apidocSignatureSpan">fs-extra.</span>open
@@ -4210,9 +4210,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.openSync" id="apidoc.element.fs-extra.openSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>openSync
@@ -4228,9 +4228,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.outputFile" id="apidoc.element.fs-extra.outputFile">
         function <span class="apidocSignatureSpan">fs-extra.</span>outputFile
@@ -4257,9 +4257,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.outputFileSync" id="apidoc.element.fs-extra.outputFileSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>outputFileSync
@@ -4277,9 +4277,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.outputJSON" id="apidoc.element.fs-extra.outputJSON">
         function <span class="apidocSignatureSpan">fs-extra.</span>outputJSON
@@ -4306,9 +4306,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.outputJSONSync" id="apidoc.element.fs-extra.outputJSONSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>outputJSONSync
@@ -4327,9 +4327,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.outputJson" id="apidoc.element.fs-extra.outputJson">
         function <span class="apidocSignatureSpan">fs-extra.</span>outputJson
@@ -4356,9 +4356,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.outputJsonSync" id="apidoc.element.fs-extra.outputJsonSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>outputJsonSync
@@ -4377,9 +4377,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.read" id="apidoc.element.fs-extra.read">
         function <span class="apidocSignatureSpan">fs-extra.</span>read
@@ -4403,9 +4403,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.readFile" id="apidoc.element.fs-extra.readFile">
         function <span class="apidocSignatureSpan">fs-extra.</span>readFile
@@ -4437,29 +4437,29 @@ Credit
 * https://github.com/ryanmcgrath/wrench-js/issues/29
 * https://github.com/substack/node-mkdirp/issues/17
 
-First, I believe that in as many cases as possible, the [Node.js naming schemes](http://nodejs.org/api/fs.html) should be chosen\
+First, I believe that in as many cases as possible, the [Node.js naming schemes](http://nodejs.org/api/fs.html) should be chosen
 . However, there are problems with the Node.js own naming schemes.
 
-For example, `fs.<span class="apidocCodeKeywordSpan">readFile</span>()` and `fs.readdir()`: the **F** is capitalized in *File* a\
-nd the **d** is not capitalized in *dir*. Perhaps a bit pedantic, but they should still be consistent. Also, Node.js has chosen \
-a lot of POSIX naming schemes, which I believe is great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
+For example, `fs.<span class="apidocCodeKeywordSpan">readFile</span>()` and `fs.readdir()`: the **F** is capitalized in *File* and
+ the **d** is not capitalized in *dir*. Perhaps a bit pedantic, but they should still be consistent. Also, Node.js has chosen a
+lot of POSIX naming schemes, which I believe is great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
 
-We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir \
--p`, and `rm -rf`?
+We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir -
+p`, and `rm -rf`?
 
-My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and fil\
-es. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all o\
-f its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, \
-then in most cases you&#x27;ll want to create that too.
+My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and files
+. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all of
+its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, then
+ in most cases you&#x27;ll want to create that too.
 
-So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want \
-to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directo\
-ry regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.mkdirp(path)`.
+So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want
+to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directory
+ regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.mkdirp(path)`.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.readFileSync" id="apidoc.element.fs-extra.readFileSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>readFileSync
@@ -4519,9 +4519,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.readJSON" id="apidoc.element.fs-extra.readJSON">
         function <span class="apidocSignatureSpan">fs-extra.</span>readJSON
@@ -4572,9 +4572,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.readJSONSync" id="apidoc.element.fs-extra.readJSONSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>readJSONSync
@@ -4614,9 +4614,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.readJson" id="apidoc.element.fs-extra.readJson">
         function <span class="apidocSignatureSpan">fs-extra.</span>readJson
@@ -4667,9 +4667,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.readJsonSync" id="apidoc.element.fs-extra.readJsonSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>readJsonSync
@@ -4709,9 +4709,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.readSync" id="apidoc.element.fs-extra.readSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>readSync
@@ -4735,9 +4735,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.readdir" id="apidoc.element.fs-extra.readdir">
         function <span class="apidocSignatureSpan">fs-extra.</span>readdir
@@ -4775,29 +4775,29 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 * https://github.com/ryanmcgrath/wrench-js/issues/29
 * https://github.com/substack/node-mkdirp/issues/17
 
-First, I believe that in as many cases as possible, the [Node.js naming schemes](http://nodejs.org/api/fs.html) should be chosen\
+First, I believe that in as many cases as possible, the [Node.js naming schemes](http://nodejs.org/api/fs.html) should be chosen
 . However, there are problems with the Node.js own naming schemes.
 
-For example, `fs.readFile()` and `fs.<span class="apidocCodeKeywordSpan">readdir</span>()`: the **F** is capitalized in *File* a\
-nd the **d** is not capitalized in *dir*. Perhaps a bit pedantic, but they should still be consistent. Also, Node.js has chosen \
-a lot of POSIX naming schemes, which I believe is great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
+For example, `fs.readFile()` and `fs.<span class="apidocCodeKeywordSpan">readdir</span>()`: the **F** is capitalized in *File* and
+ the **d** is not capitalized in *dir*. Perhaps a bit pedantic, but they should still be consistent. Also, Node.js has chosen a
+lot of POSIX naming schemes, which I believe is great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
 
-We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir \
--p`, and `rm -rf`?
+We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir -
+p`, and `rm -rf`?
 
-My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and fil\
-es. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all o\
-f its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, \
-then in most cases you&#x27;ll want to create that too.
+My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and files
+. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all of
+its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, then
+ in most cases you&#x27;ll want to create that too.
 
-So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want \
-to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directo\
-ry regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.mkdirp(path)`.
+So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want
+to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directory
+ regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.mkdirp(path)`.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.readdirSync" id="apidoc.element.fs-extra.readdirSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>readdirSync
@@ -4813,9 +4813,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.readlink" id="apidoc.element.fs-extra.readlink">
         function <span class="apidocSignatureSpan">fs-extra.</span>readlink
@@ -4835,9 +4835,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.readlinkSync" id="apidoc.element.fs-extra.readlinkSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>readlinkSync
@@ -4853,9 +4853,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.realpath" id="apidoc.element.fs-extra.realpath">
         function <span class="apidocSignatureSpan">fs-extra.</span>realpath
@@ -4976,9 +4976,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.realpathSync" id="apidoc.element.fs-extra.realpathSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>realpathSync
@@ -5089,9 +5089,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.remove" id="apidoc.element.fs-extra.remove">
         function <span class="apidocSignatureSpan">fs-extra.</span>remove
@@ -5105,22 +5105,22 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. P\
-erhaps a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I beli\
-eve is great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
+For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. Perhaps
+ a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I believe is
+ great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
 
-We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir \
--p`, and `rm -rf`?
+We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir -
+p`, and `rm -rf`?
 
-My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and fil\
-es. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all o\
-f its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, \
-then in most cases you&#x27;ll want to create that too.
+My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and files
+. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all of
+its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, then
+ in most cases you&#x27;ll want to create that too.
 
-So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.<span class="apidocCodeKeyw\
-ordSpan">remove</span>(path)`. If you want to copy a file or a directory whether it has contents, just call `fs.copy(source, des\
-tination)`. If you want to create a directory regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or\
- `fs.mkdirp(path)`.
+So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.<span class="apidocCodeKeywordSpan
+">remove</span>(path)`. If you want to copy a file or a directory whether it has contents, just call `fs.copy(source, destination
+)`. If you want to create a directory regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.mkdirp
+(path)`.
 
 
 Credit
@@ -5129,9 +5129,9 @@ Credit
 `fs-extra` wouldn&#x27;t be possible without using the modules from the following authors:
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.removeSync" id="apidoc.element.fs-extra.removeSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>removeSync
@@ -5144,9 +5144,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.rename" id="apidoc.element.fs-extra.rename">
         function <span class="apidocSignatureSpan">fs-extra.</span>rename
@@ -5172,9 +5172,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.renameSync" id="apidoc.element.fs-extra.renameSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>renameSync
@@ -5192,9 +5192,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.rmdir" id="apidoc.element.fs-extra.rmdir">
         function <span class="apidocSignatureSpan">fs-extra.</span>rmdir
@@ -5217,29 +5217,29 @@ Credit
 * https://github.com/ryanmcgrath/wrench-js/issues/29
 * https://github.com/substack/node-mkdirp/issues/17
 
-First, I believe that in as many cases as possible, the [Node.js naming schemes](http://nodejs.org/api/fs.html) should be chosen\
+First, I believe that in as many cases as possible, the [Node.js naming schemes](http://nodejs.org/api/fs.html) should be chosen
 . However, there are problems with the Node.js own naming schemes.
 
-For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. P\
-erhaps a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I beli\
-eve is great. See: `fs.mkdir()`, `fs.<span class="apidocCodeKeywordSpan">rmdir</span>()`, `fs.chown()`, etc.
+For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. Perhaps
+ a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I believe is
+ great. See: `fs.mkdir()`, `fs.<span class="apidocCodeKeywordSpan">rmdir</span>()`, `fs.chown()`, etc.
 
-We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir \
--p`, and `rm -rf`?
+We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir -
+p`, and `rm -rf`?
 
-My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and fil\
-es. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all o\
-f its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, \
-then in most cases you&#x27;ll want to create that too.
+My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and files
+. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all of
+its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, then
+ in most cases you&#x27;ll want to create that too.
 
-So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want \
-to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directo\
-ry regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.mkdirp(path)`.
+So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want
+to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directory
+ regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.mkdirp(path)`.
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.rmdirSync" id="apidoc.element.fs-extra.rmdirSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>rmdirSync
@@ -5254,9 +5254,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.stat" id="apidoc.element.fs-extra.stat">
         function <span class="apidocSignatureSpan">fs-extra.</span>stat
@@ -5274,9 +5274,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.statSync" id="apidoc.element.fs-extra.statSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>statSync
@@ -5292,9 +5292,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.symlink" id="apidoc.element.fs-extra.symlink">
         function <span class="apidocSignatureSpan">fs-extra.</span>symlink
@@ -5325,9 +5325,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.symlinkSync" id="apidoc.element.fs-extra.symlinkSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>symlinkSync
@@ -5348,9 +5348,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.truncate" id="apidoc.element.fs-extra.truncate">
         function <span class="apidocSignatureSpan">fs-extra.</span>truncate
@@ -5383,9 +5383,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.truncateSync" id="apidoc.element.fs-extra.truncateSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>truncateSync
@@ -5414,9 +5414,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.unlink" id="apidoc.element.fs-extra.unlink">
         function <span class="apidocSignatureSpan">fs-extra.</span>unlink
@@ -5435,9 +5435,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.unlinkSync" id="apidoc.element.fs-extra.unlinkSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>unlinkSync
@@ -5452,9 +5452,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.unwatchFile" id="apidoc.element.fs-extra.unwatchFile">
         function <span class="apidocSignatureSpan">fs-extra.</span>unwatchFile
@@ -5483,9 +5483,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.utimes" id="apidoc.element.fs-extra.utimes">
         function <span class="apidocSignatureSpan">fs-extra.</span>utimes
@@ -5507,9 +5507,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.utimesSync" id="apidoc.element.fs-extra.utimesSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>utimesSync
@@ -5526,9 +5526,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.watch" id="apidoc.element.fs-extra.watch">
         function <span class="apidocSignatureSpan">fs-extra.</span>watch
@@ -5565,9 +5565,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.watchFile" id="apidoc.element.fs-extra.watchFile">
         function <span class="apidocSignatureSpan">fs-extra.</span>watchFile
@@ -5613,9 +5613,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.write" id="apidoc.element.fs-extra.write">
         function <span class="apidocSignatureSpan">fs-extra.</span>write
@@ -5662,9 +5662,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.writeFile" id="apidoc.element.fs-extra.writeFile">
         function <span class="apidocSignatureSpan">fs-extra.</span>writeFile
@@ -5692,9 +5692,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.writeFileSync" id="apidoc.element.fs-extra.writeFileSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>writeFileSync
@@ -5730,9 +5730,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.writeJSON" id="apidoc.element.fs-extra.writeJSON">
         function <span class="apidocSignatureSpan">fs-extra.</span>writeJSON
@@ -5764,9 +5764,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.writeJSONSync" id="apidoc.element.fs-extra.writeJSONSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>writeJSONSync
@@ -5789,9 +5789,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.writeJson" id="apidoc.element.fs-extra.writeJson">
         function <span class="apidocSignatureSpan">fs-extra.</span>writeJson
@@ -5823,9 +5823,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.writeJsonSync" id="apidoc.element.fs-extra.writeJsonSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>writeJsonSync
@@ -5848,9 +5848,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.writeSync" id="apidoc.element.fs-extra.writeSync">
         function <span class="apidocSignatureSpan">fs-extra.</span>writeSync
@@ -5876,46 +5876,46 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.ReadStream" id="apidoc.module.fs-extra.ReadStream">module fs-extra.ReadStream</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ReadStream.ReadStream" id="apidoc.element.fs-extra.ReadStream.ReadStream">
         function <span class="apidocSignatureSpan">fs-extra.</span>ReadStream
@@ -5931,14 +5931,14 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.ReadStream.prototype" id="apidoc.module.fs-extra.ReadStream.prototype">module fs-extra.ReadStream.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ReadStream.prototype.open" id="apidoc.element.fs-extra.ReadStream.prototype.open">
         function <span class="apidocSignatureSpan">fs-extra.ReadStream.prototype.</span>open
@@ -5963,14 +5963,14 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.Stats" id="apidoc.module.fs-extra.Stats">module fs-extra.Stats</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.Stats.Stats" id="apidoc.element.fs-extra.Stats.Stats">
         function <span class="apidocSignatureSpan">fs-extra.</span>Stats
@@ -5996,14 +5996,14 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.Stats.prototype" id="apidoc.module.fs-extra.Stats.prototype">module fs-extra.Stats.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.Stats.prototype._checkModeProperty" id="apidoc.element.fs-extra.Stats.prototype._checkModeProperty">
         function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>_checkModeProperty
@@ -6016,9 +6016,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.Stats.prototype.isBlockDevice" id="apidoc.element.fs-extra.Stats.prototype.isBlockDevice">
         function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>isBlockDevice
@@ -6031,9 +6031,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.Stats.prototype.isCharacterDevice" id="apidoc.element.fs-extra.Stats.prototype.isCharacterDevice">
         function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>isCharacterDevice
@@ -6046,9 +6046,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.Stats.prototype.isDirectory" id="apidoc.element.fs-extra.Stats.prototype.isDirectory">
         function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>isDirectory
@@ -6061,9 +6061,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.Stats.prototype.isFIFO" id="apidoc.element.fs-extra.Stats.prototype.isFIFO">
         function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>isFIFO
@@ -6076,9 +6076,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.Stats.prototype.isFile" id="apidoc.element.fs-extra.Stats.prototype.isFile">
         function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>isFile
@@ -6091,9 +6091,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.Stats.prototype.isSocket" id="apidoc.element.fs-extra.Stats.prototype.isSocket">
         function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>isSocket
@@ -6106,9 +6106,9 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.Stats.prototype.isSymbolicLink" id="apidoc.element.fs-extra.Stats.prototype.isSymbolicLink">
         function <span class="apidocSignatureSpan">fs-extra.Stats.prototype.</span>isSymbolicLink
@@ -6121,14 +6121,14 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.WriteStream" id="apidoc.module.fs-extra.WriteStream">module fs-extra.WriteStream</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.WriteStream.WriteStream" id="apidoc.element.fs-extra.WriteStream.WriteStream">
         function <span class="apidocSignatureSpan">fs-extra.</span>WriteStream
@@ -6144,14 +6144,14 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.WriteStream.prototype" id="apidoc.module.fs-extra.WriteStream.prototype">module fs-extra.WriteStream.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.WriteStream.prototype.open" id="apidoc.element.fs-extra.WriteStream.prototype.open">
         function <span class="apidocSignatureSpan">fs-extra.WriteStream.prototype.</span>open
@@ -6173,14 +6173,14 @@ ry regardless of whether its parent directories exist, just call `fs.mkdirs(path
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.copy" id="apidoc.module.fs-extra.copy">module fs-extra.copy</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.copy.copy" id="apidoc.element.fs-extra.copy.copy">
         function <span class="apidocSignatureSpan">fs-extra.</span>copy
@@ -6249,14 +6249,14 @@ fs.copySync(&#x27;/tmp/myfile&#x27;, &#x27;/tmp/mynewfile&#x27;)
 console.log(&#x22;success!&#x22;)
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.copy_sync" id="apidoc.module.fs-extra.copy_sync">module fs-extra.copy_sync</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.copy_sync.copySync" id="apidoc.element.fs-extra.copy_sync.copySync">
         function <span class="apidocSignatureSpan">fs-extra.copy_sync.</span>copySync
@@ -6333,14 +6333,14 @@ try {
 ```
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.empty" id="apidoc.module.fs-extra.empty">module fs-extra.empty</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.empty.emptyDir" id="apidoc.element.fs-extra.empty.emptyDir">
         function <span class="apidocSignatureSpan">fs-extra.empty.</span>emptyDir
@@ -6369,9 +6369,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.empty.emptyDirSync" id="apidoc.element.fs-extra.empty.emptyDirSync">
         function <span class="apidocSignatureSpan">fs-extra.empty.</span>emptyDirSync
@@ -6394,9 +6394,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.empty.emptydir" id="apidoc.element.fs-extra.empty.emptydir">
         function <span class="apidocSignatureSpan">fs-extra.empty.</span>emptydir
@@ -6425,9 +6425,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.empty.emptydirSync" id="apidoc.element.fs-extra.empty.emptydirSync">
         function <span class="apidocSignatureSpan">fs-extra.empty.</span>emptydirSync
@@ -6450,14 +6450,14 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.ensure" id="apidoc.module.fs-extra.ensure">module fs-extra.ensure</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensure.createFile" id="apidoc.element.fs-extra.ensure.createFile">
         function <span class="apidocSignatureSpan">fs-extra.ensure.</span>createFile
@@ -6487,9 +6487,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensure.createFileSync" id="apidoc.element.fs-extra.ensure.createFileSync">
         function <span class="apidocSignatureSpan">fs-extra.ensure.</span>createFileSync
@@ -6509,9 +6509,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensure.createLink" id="apidoc.element.fs-extra.ensure.createLink">
         function <span class="apidocSignatureSpan">fs-extra.ensure.</span>createLink
@@ -6548,9 +6548,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensure.createLinkSync" id="apidoc.element.fs-extra.ensure.createLinkSync">
         function <span class="apidocSignatureSpan">fs-extra.ensure.</span>createLinkSync
@@ -6578,9 +6578,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensure.createSymlink" id="apidoc.element.fs-extra.ensure.createSymlink">
         function <span class="apidocSignatureSpan">fs-extra.ensure.</span>createSymlink
@@ -6613,9 +6613,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensure.createSymlinkSync" id="apidoc.element.fs-extra.ensure.createSymlinkSync">
         function <span class="apidocSignatureSpan">fs-extra.ensure.</span>createSymlinkSync
@@ -6641,9 +6641,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensure.ensureFile" id="apidoc.element.fs-extra.ensure.ensureFile">
         function <span class="apidocSignatureSpan">fs-extra.ensure.</span>ensureFile
@@ -6673,9 +6673,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensure.ensureFileSync" id="apidoc.element.fs-extra.ensure.ensureFileSync">
         function <span class="apidocSignatureSpan">fs-extra.ensure.</span>ensureFileSync
@@ -6695,9 +6695,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensure.ensureLink" id="apidoc.element.fs-extra.ensure.ensureLink">
         function <span class="apidocSignatureSpan">fs-extra.ensure.</span>ensureLink
@@ -6734,9 +6734,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensure.ensureLinkSync" id="apidoc.element.fs-extra.ensure.ensureLinkSync">
         function <span class="apidocSignatureSpan">fs-extra.ensure.</span>ensureLinkSync
@@ -6764,9 +6764,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensure.ensureSymlink" id="apidoc.element.fs-extra.ensure.ensureSymlink">
         function <span class="apidocSignatureSpan">fs-extra.ensure.</span>ensureSymlink
@@ -6799,9 +6799,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.ensure.ensureSymlinkSync" id="apidoc.element.fs-extra.ensure.ensureSymlinkSync">
         function <span class="apidocSignatureSpan">fs-extra.ensure.</span>ensureSymlinkSync
@@ -6827,14 +6827,14 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.json" id="apidoc.module.fs-extra.json">module fs-extra.json</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.json.outputJSON" id="apidoc.element.fs-extra.json.outputJSON">
         function <span class="apidocSignatureSpan">fs-extra.json.</span>outputJSON
@@ -6861,9 +6861,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.json.outputJSONSync" id="apidoc.element.fs-extra.json.outputJSONSync">
         function <span class="apidocSignatureSpan">fs-extra.json.</span>outputJSONSync
@@ -6882,9 +6882,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.json.outputJson" id="apidoc.element.fs-extra.json.outputJson">
         function <span class="apidocSignatureSpan">fs-extra.json.</span>outputJson
@@ -6911,9 +6911,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.json.outputJsonSync" id="apidoc.element.fs-extra.json.outputJsonSync">
         function <span class="apidocSignatureSpan">fs-extra.json.</span>outputJsonSync
@@ -6932,9 +6932,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.json.readJSON" id="apidoc.element.fs-extra.json.readJSON">
         function <span class="apidocSignatureSpan">fs-extra.json.</span>readJSON
@@ -6985,9 +6985,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.json.readJSONSync" id="apidoc.element.fs-extra.json.readJSONSync">
         function <span class="apidocSignatureSpan">fs-extra.json.</span>readJSONSync
@@ -7027,9 +7027,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.json.readJson" id="apidoc.element.fs-extra.json.readJson">
         function <span class="apidocSignatureSpan">fs-extra.json.</span>readJson
@@ -7080,9 +7080,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.json.readJsonSync" id="apidoc.element.fs-extra.json.readJsonSync">
         function <span class="apidocSignatureSpan">fs-extra.json.</span>readJsonSync
@@ -7122,9 +7122,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.json.writeJSON" id="apidoc.element.fs-extra.json.writeJSON">
         function <span class="apidocSignatureSpan">fs-extra.json.</span>writeJSON
@@ -7156,9 +7156,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.json.writeJSONSync" id="apidoc.element.fs-extra.json.writeJSONSync">
         function <span class="apidocSignatureSpan">fs-extra.json.</span>writeJSONSync
@@ -7181,9 +7181,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.json.writeJson" id="apidoc.element.fs-extra.json.writeJson">
         function <span class="apidocSignatureSpan">fs-extra.json.</span>writeJson
@@ -7215,9 +7215,9 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.json.writeJsonSync" id="apidoc.element.fs-extra.json.writeJsonSync">
         function <span class="apidocSignatureSpan">fs-extra.json.</span>writeJsonSync
@@ -7240,16 +7240,16 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
-    
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.mkdirs" id="apidoc.module.fs-extra.mkdirs">module fs-extra.mkdirs</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.mkdirs.mkdirs" id="apidoc.element.fs-extra.mkdirs.mkdirs">
         function <span class="apidocSignatureSpan">fs-extra.</span>mkdirs
@@ -7312,22 +7312,22 @@ try {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. P\
-erhaps a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I beli\
-eve is great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
+For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. Perhaps
+ a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I believe is
+ great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
 
-We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir \
--p`, and `rm -rf`?
+We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir -
+p`, and `rm -rf`?
 
-My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and fil\
-es. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all o\
-f its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, \
-then in most cases you&#x27;ll want to create that too.
+My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and files
+. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all of
+its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, then
+ in most cases you&#x27;ll want to create that too.
 
-So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want \
-to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directo\
-ry regardless of whether its parent directories exist, just call `fs.<span class="apidocCodeKeywordSpan">mkdirs</span>(path)` or\
- `fs.mkdirp(path)`.
+So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want
+to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directory
+ regardless of whether its parent directories exist, just call `fs.<span class="apidocCodeKeywordSpan">mkdirs</span>(path)` or `
+fs.mkdirp(path)`.
 
 
 Credit
@@ -7336,9 +7336,9 @@ Credit
 `fs-extra` wouldn&#x27;t be possible without using the modules from the following authors:
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.mkdirs.ensureDir" id="apidoc.element.fs-extra.mkdirs.ensureDir">
         function <span class="apidocSignatureSpan">fs-extra.mkdirs.</span>ensureDir
@@ -7401,9 +7401,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.mkdirs.ensureDirSync" id="apidoc.element.fs-extra.mkdirs.ensureDirSync">
         function <span class="apidocSignatureSpan">fs-extra.mkdirs.</span>ensureDirSync
@@ -7462,9 +7462,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.mkdirs.mkdirp" id="apidoc.element.fs-extra.mkdirs.mkdirp">
         function <span class="apidocSignatureSpan">fs-extra.mkdirs.</span>mkdirp
@@ -7527,22 +7527,22 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. P\
-erhaps a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I beli\
-eve is great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
+For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. Perhaps
+ a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I believe is
+ great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
 
-We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir \
--p`, and `rm -rf`?
+We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir -
+p`, and `rm -rf`?
 
-My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and fil\
-es. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all o\
-f its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, \
-then in most cases you&#x27;ll want to create that too.
+My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and files
+. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all of
+its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, then
+ in most cases you&#x27;ll want to create that too.
 
-So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want \
-to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directo\
-ry regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.<span class="apidocCodeKeywordSpan">mk\
-dirp</span>(path)`.
+So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.remove(path)`. If you want
+to copy a file or a directory whether it has contents, just call `fs.copy(source, destination)`. If you want to create a directory
+ regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.<span class="apidocCodeKeywordSpan">mkdirp
+</span>(path)`.
 
 
 Credit
@@ -7551,9 +7551,9 @@ Credit
 `fs-extra` wouldn&#x27;t be possible without using the modules from the following authors:
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.mkdirs.mkdirpSync" id="apidoc.element.fs-extra.mkdirs.mkdirpSync">
         function <span class="apidocSignatureSpan">fs-extra.mkdirs.</span>mkdirpSync
@@ -7612,9 +7612,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.mkdirs.mkdirsSync" id="apidoc.element.fs-extra.mkdirs.mkdirsSync">
         function <span class="apidocSignatureSpan">fs-extra.mkdirs.</span>mkdirsSync
@@ -7673,14 +7673,14 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.move" id="apidoc.module.fs-extra.move">module fs-extra.move</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.move.move" id="apidoc.element.fs-extra.move.move">
         function <span class="apidocSignatureSpan">fs-extra.</span>move
@@ -7758,14 +7758,14 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.move_sync" id="apidoc.module.fs-extra.move_sync">module fs-extra.move_sync</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.move_sync.moveSync" id="apidoc.element.fs-extra.move_sync.moveSync">
         function <span class="apidocSignatureSpan">fs-extra.move_sync.</span>moveSync
@@ -7816,14 +7816,14 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.output" id="apidoc.module.fs-extra.output">module fs-extra.output</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.output.outputFile" id="apidoc.element.fs-extra.output.outputFile">
         function <span class="apidocSignatureSpan">fs-extra.output.</span>outputFile
@@ -7850,9 +7850,9 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.output.outputFileSync" id="apidoc.element.fs-extra.output.outputFileSync">
         function <span class="apidocSignatureSpan">fs-extra.output.</span>outputFileSync
@@ -7870,14 +7870,14 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.fs-extra.remove" id="apidoc.module.fs-extra.remove">module fs-extra.remove</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.remove.remove" id="apidoc.element.fs-extra.remove.remove">
         function <span class="apidocSignatureSpan">fs-extra.</span>remove
@@ -7891,22 +7891,22 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
 
-For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. P\
-erhaps a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I beli\
-eve is great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
+For example, `fs.readFile()` and `fs.readdir()`: the **F** is capitalized in *File* and the **d** is not capitalized in *dir*. Perhaps
+ a bit pedantic, but they should still be consistent. Also, Node.js has chosen a lot of POSIX naming schemes, which I believe is
+ great. See: `fs.mkdir()`, `fs.rmdir()`, `fs.chown()`, etc.
 
-We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir \
--p`, and `rm -rf`?
+We have a dilemma though. How do you consistently name methods that perform the following POSIX commands: `cp`, `cp -r`, `mkdir -
+p`, and `rm -rf`?
 
-My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and fil\
-es. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all o\
-f its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, \
-then in most cases you&#x27;ll want to create that too.
+My perspective: when in doubt, err on the side of simplicity. A directory is just a hierarchical grouping of directories and files
+. Consider that for a moment. So when you want to copy it or remove it, in most cases you&#x27;ll want to copy or remove all of
+its contents. When you want to create a directory, if the directory that it&#x27;s suppose to be contained in does not exist, then
+ in most cases you&#x27;ll want to create that too.
 
-So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.<span class="apidocCodeKeyw\
-ordSpan">remove</span>(path)`. If you want to copy a file or a directory whether it has contents, just call `fs.copy(source, des\
-tination)`. If you want to create a directory regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or\
- `fs.mkdirp(path)`.
+So, if you want to remove a file or a directory regardless of whether it has contents, just call `fs.<span class="apidocCodeKeywordSpan
+">remove</span>(path)`. If you want to copy a file or a directory whether it has contents, just call `fs.copy(source, destination
+)`. If you want to create a directory regardless of whether its parent directories exist, just call `fs.mkdirs(path)` or `fs.mkdirp
+(path)`.
 
 
 Credit
@@ -7915,9 +7915,9 @@ Credit
 `fs-extra` wouldn&#x27;t be possible without using the modules from the following authors:
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.fs-extra.remove.removeSync" id="apidoc.element.fs-extra.remove.removeSync">
         function <span class="apidocSignatureSpan">fs-extra.remove.</span>removeSync
@@ -7930,8 +7930,8 @@ Credit
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocFooterDiv">
