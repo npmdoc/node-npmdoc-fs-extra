@@ -1529,9 +1529,6 @@
     throw new TypeError(&#x27;&#x22;callback&#x22; argument must be a function&#x27;);
   }
 
-  if (handleError((path = getPathFromURL(path)), callback))
-    return;
-
   if (!nullCheck(path, callback))
     return;
 
@@ -1553,7 +1550,6 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">accessSync = function (path, mode) {
-  handleError((path = getPathFromURL(path)));
   nullCheck(path);
 
   if (mode === undefined)
@@ -1606,13 +1602,19 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">appendFileSync = function (path, data, options) {
-  options = getOptions(options, { encoding: &#x27;utf8&#x27;, mode: 0o666, flag: &#x27;a&#x27; });
+  if (!options) {
+    options = { encoding: &#x27;utf8&#x27;, mode: 0o666, flag: &#x27;a&#x27; };
+  } else if (typeof options === &#x27;string&#x27;) {
+    options = { encoding: options, mode: 0o666, flag: &#x27;a&#x27; };
+  } else if (typeof options !== &#x27;object&#x27;) {
+    throwOptionsError(options);
+  }
 
-  // Don&#x27;t make changes directly on options object
-  options = copyObject(options);
+  if (!options.flag)
+    options = util._extend({ flag: &#x27;a&#x27; }, options);
 
   // force append behavior when using a supplied file descriptor
-  if (!options.flag || isFd(path))
+  if (isFd(path))
     options.flag = &#x27;a&#x27;;
 
   fs.writeFileSync(path, data, options);
@@ -2558,8 +2560,6 @@ try {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">exists = function (path, callback) {
-  if (handleError((path = getPathFromURL(path)), cb))
-    return;
   if (!nullCheck(path, cb)) return;
   var req = new FSReqWrap();
   req.oncomplete = cb;
@@ -2582,7 +2582,6 @@ try {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">existsSync = function (path) {
   try {
-    handleError((path = getPathFromURL(path)));
     nullCheck(path);
     binding.stat(pathModule._makeLong(path), statValues);
     return true;
@@ -3073,13 +3072,6 @@ try {
     <ul>
     <li>description and source-code<pre class="apidocCodePre">link = function (existingPath, newPath, callback) {
   callback = makeCallback(callback);
-
-  if (handleError((existingPath = getPathFromURL(existingPath)), callback))
-    return;
-
-  if (handleError((newPath = getPathFromURL(newPath)), callback))
-    return;
-
   if (!nullCheck(existingPath, callback)) return;
   if (!nullCheck(newPath, callback)) return;
 
@@ -3103,8 +3095,6 @@ try {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">linkSync = function (existingPath, newPath) {
-  handleError((existingPath = getPathFromURL(existingPath)));
-  handleError((newPath = getPathFromURL(newPath)));
   nullCheck(existingPath);
   nullCheck(newPath);
   return binding.link(pathModule._makeLong(existingPath),
@@ -3189,8 +3179,6 @@ try {
     <li>description and source-code<pre class="apidocCodePre">mkdir = function (path, mode, callback) {
   if (typeof mode === &#x27;function&#x27;) callback = mode;
   callback = makeCallback(callback);
-  if (handleError((path = getPathFromURL(path)), callback))
-    return;
   if (!nullCheck(path, callback)) return;
   var req = new FSReqWrap();
   req.oncomplete = callback;
@@ -3235,7 +3223,6 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">mkdirSync = function (path, mode) {
-  handleError((path = getPathFromURL(path)));
   nullCheck(path);
   return binding.mkdir(pathModule._makeLong(path),
                        modeNum(mode, 0o777));
@@ -3553,10 +3540,20 @@ Credit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">mkdtemp = function (prefix, options, callback) {
-  callback = makeCallback(typeof options === &#x27;function&#x27; ? options : callback);
-  options = getOptions(options, {});
   if (!prefix || typeof prefix !== &#x27;string&#x27;)
     throw new TypeError(&#x27;filename prefix is required&#x27;);
+
+  options = options || {};
+  if (typeof options === &#x27;function&#x27;) {
+    callback = options;
+    options = {};
+  } else if (typeof options === &#x27;string&#x27;) {
+    options = {encoding: options};
+  }
+  if (typeof options !== &#x27;object&#x27;)
+    throw new TypeError(&#x27;&#x22;options&#x22; must be a string or an object&#x27;);
+
+  callback = makeCallback(callback);
   if (!nullCheck(prefix, callback)) {
     return;
   }
@@ -3581,8 +3578,14 @@ Credit
     <li>description and source-code<pre class="apidocCodePre">mkdtempSync = function (prefix, options) {
   if (!prefix || typeof prefix !== &#x27;string&#x27;)
     throw new TypeError(&#x27;filename prefix is required&#x27;);
-  options = getOptions(options, {});
+
+  options = options || {};
+  if (typeof options === &#x27;string&#x27;)
+    options = {encoding: options};
+  if (typeof options !== &#x27;object&#x27;)
+    throw new TypeError(&#x27;&#x22;options&#x22; must be a string or an object&#x27;);
   nullCheck(prefix);
+
   return binding.mkdtemp(prefix + &#x27;XXXXXX&#x27;, options.encoding);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -3762,7 +3765,6 @@ Credit
     <ul>
     <li>description and source-code<pre class="apidocCodePre">openSync = function (path, flags, mode) {
   mode = modeNum(mode, 0o666);
-  handleError((path = getPathFromURL(path)));
   nullCheck(path);
   return binding.open(pathModule._makeLong(path), stringToFlags(flags), mode);
 }</pre></li>
@@ -4008,9 +4010,20 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">readFileSync = function (path, options) {
-  options = getOptions(options, { flag: &#x27;r&#x27; });
+  if (!options) {
+    options = { encoding: null, flag: &#x27;r&#x27; };
+  } else if (typeof options === &#x27;string&#x27;) {
+    options = { encoding: options, flag: &#x27;r&#x27; };
+  } else if (typeof options !== &#x27;object&#x27;) {
+    throwOptionsError(options);
+  }
+
+  var encoding = options.encoding;
+  assertEncoding(encoding);
+
+  var flag = options.flag || &#x27;r&#x27;;
   var isUserFd = isFd(path); // file descriptor ownership
-  var fd = isUserFd ? path : fs.openSync(path, options.flag || &#x27;r&#x27;, 0o666);
+  var fd = isUserFd ? path : fs.openSync(path, flag, 0o666);
 
   var st = tryStatSync(fd, isUserFd);
   var size = st.isFile() ? st.size : 0;
@@ -4054,7 +4067,7 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     buffer = buffer.slice(0, pos);
   }
 
-  if (options.encoding) buffer = buffer.toString(options.encoding);
+  if (encoding) buffer = buffer.toString(encoding);
   return buffer;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -4346,8 +4359,11 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">readdirSync = function (path, options) {
-  options = getOptions(options, {});
-  handleError((path = getPathFromURL(path)));
+  options = options || {};
+  if (typeof options === &#x27;string&#x27;)
+    options = {encoding: options};
+  if (typeof options !== &#x27;object&#x27;)
+    throw new TypeError(&#x27;&#x22;options&#x22; must be a string or an object&#x27;);
   nullCheck(path);
   return binding.readdir(pathModule._makeLong(path), options.encoding);
 }</pre></li>
@@ -4364,10 +4380,16 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">readlink = function (path, options, callback) {
-  callback = makeCallback(typeof options === &#x27;function&#x27; ? options : callback);
-  options = getOptions(options, {});
-  if (handleError((path = getPathFromURL(path)), callback))
-    return;
+  options = options || {};
+  if (typeof options === &#x27;function&#x27;) {
+    callback = options;
+    options = {};
+  } else if (typeof options === &#x27;string&#x27;) {
+    options = {encoding: options};
+  }
+  if (typeof options !== &#x27;object&#x27;)
+    throw new TypeError(&#x27;&#x22;options&#x22; must be a string or an object&#x27;);
+  callback = makeCallback(callback);
   if (!nullCheck(path, callback)) return;
   var req = new FSReqWrap();
   req.oncomplete = callback;
@@ -4386,8 +4408,11 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">readlinkSync = function (path, options) {
-  options = getOptions(options, {});
-  handleError((path = getPathFromURL(path)));
+  options = options || {};
+  if (typeof options === &#x27;string&#x27;)
+    options = {encoding: options};
+  if (typeof options !== &#x27;object&#x27;)
+    throw new TypeError(&#x27;&#x22;options&#x22; must be a string or an object&#x27;);
   nullCheck(path);
   return binding.readlink(pathModule._makeLong(path), options.encoding);
 }</pre></li>
@@ -4404,10 +4429,20 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function realpath(p, options, callback) {
-  callback = maybeCallback(typeof options === &#x27;function&#x27; ? options : callback);
-  options = getOptions(options, {});
-  if (handleError((p = getPathFromURL(p)), callback))
-    return;
+  if (typeof callback !== &#x27;function&#x27;) {
+    callback = maybeCallback(options);
+    options = {};
+  }
+
+  if (!options) {
+    options = {};
+  } else if (typeof options === &#x27;function&#x27;) {
+    options = {};
+  } else if (typeof options === &#x27;string&#x27;) {
+    options = {encoding: options};
+  } else if (typeof options !== &#x27;object&#x27;) {
+    throw new TypeError(&#x27;&#x22;options&#x22; must be a string or an object&#x27;);
+  }
   if (!nullCheck(p, callback))
     return;
 
@@ -4527,8 +4562,12 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function realpathSync(p, options) {
-  options = getOptions(options, {});
-  handleError((p = getPathFromURL(p)));
+  if (!options)
+    options = {};
+  else if (typeof options === &#x27;string&#x27;)
+    options = {encoding: options};
+  else if (typeof options !== &#x27;object&#x27;)
+    throw new TypeError(&#x27;&#x22;options&#x22; must be a string or an object&#x27;);
   nullCheck(p);
 
   p = p.toString(&#x27;utf8&#x27;);
@@ -4536,7 +4575,7 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
 
   const seenLinks = {};
   const knownHard = {};
-  const cache = options[internalFS.realpathCacheKey];
+  const cache = options[realpathCacheKey];
   const original = p;
 
   const maybeCachedResult = cache &#x26;&#x26; cache.get(p);
@@ -4696,12 +4735,6 @@ Credit
     <ul>
     <li>description and source-code<pre class="apidocCodePre">rename = function (oldPath, newPath, callback) {
   callback = makeCallback(callback);
-  if (handleError((oldPath = getPathFromURL(oldPath)), callback))
-    return;
-
-  if (handleError((newPath = getPathFromURL(newPath)), callback))
-    return;
-
   if (!nullCheck(oldPath, callback)) return;
   if (!nullCheck(newPath, callback)) return;
   var req = new FSReqWrap();
@@ -4723,8 +4756,6 @@ Credit
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">renameSync = function (oldPath, newPath) {
-  handleError((oldPath = getPathFromURL(oldPath)));
-  handleError((newPath = getPathFromURL(newPath)));
   nullCheck(oldPath);
   nullCheck(newPath);
   return binding.rename(pathModule._makeLong(oldPath),
@@ -4744,8 +4775,6 @@ Credit
     <ul>
     <li>description and source-code<pre class="apidocCodePre">rmdir = function (path, callback) {
   callback = maybeCallback(callback);
-  if (handleError((path = getPathFromURL(path)), callback))
-    return;
   if (!nullCheck(path, callback)) return;
   var req = new FSReqWrap();
   req.oncomplete = callback;
@@ -4788,7 +4817,6 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">rmdirSync = function (path) {
-  handleError((path = getPathFromURL(path)));
   nullCheck(path);
   return binding.rmdir(pathModule._makeLong(path));
 }</pre></li>
@@ -4846,12 +4874,6 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
   var type = (typeof type_ === &#x27;string&#x27; ? type_ : null);
   var callback = makeCallback(arguments[arguments.length - 1]);
 
-  if (handleError((target = getPathFromURL(target)), callback))
-    return;
-
-  if (handleError((path = getPathFromURL(path)), callback))
-    return;
-
   if (!nullCheck(target, callback)) return;
   if (!nullCheck(path, callback)) return;
 
@@ -4877,8 +4899,7 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     <ul>
     <li>description and source-code<pre class="apidocCodePre">symlinkSync = function (target, path, type) {
   type = (typeof type === &#x27;string&#x27; ? type : null);
-  handleError((target = getPathFromURL(target)));
-  handleError((path = getPathFromURL(path)));
+
   nullCheck(target);
   nullCheck(path);
 
@@ -4966,8 +4987,6 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unlink = function (path, callback) {
   callback = makeCallback(callback);
-  if (handleError((path = getPathFromURL(path)), callback))
-    return;
   if (!nullCheck(path, callback)) return;
   var req = new FSReqWrap();
   req.oncomplete = callback;
@@ -4986,7 +5005,6 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unlinkSync = function (path) {
-  handleError((path = getPathFromURL(path)));
   nullCheck(path);
   return binding.unlink(pathModule._makeLong(path));
 }</pre></li>
@@ -5003,7 +5021,6 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">unwatchFile = function (filename, listener) {
-  handleError((filename = getPathFromURL(filename)));
   nullCheck(filename);
   filename = pathModule.resolve(filename);
   var stat = statWatchers.get(filename);
@@ -5035,8 +5052,6 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     <ul>
     <li>description and source-code<pre class="apidocCodePre">utimes = function (path, atime, mtime, callback) {
   callback = makeCallback(callback);
-  if (handleError((path = getPathFromURL(path)), callback))
-    return;
   if (!nullCheck(path, callback)) return;
   var req = new FSReqWrap();
   req.oncomplete = callback;
@@ -5058,7 +5073,6 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">utimesSync = function (path, atime, mtime) {
-  handleError((path = getPathFromURL(path)));
   nullCheck(path);
   atime = toUnixTimestamp(atime);
   mtime = toUnixTimestamp(mtime);
@@ -5077,16 +5091,17 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">watch = function (filename, options, listener) {
-  handleError((filename = getPathFromURL(filename)));
   nullCheck(filename);
 
+  options = options || {};
   if (typeof options === &#x27;function&#x27;) {
     listener = options;
+    options = {};
+  } else if (typeof options === &#x27;string&#x27;) {
+    options = {encoding: options};
   }
-  options = getOptions(options, {});
-
-  // Don&#x27;t make changes directly on options object
-  options = copyObject(options);
+  if (typeof options !== &#x27;object&#x27;)
+    throw new TypeError(&#x27;&#x22;options&#x22; must be a string or an object&#x27;);
 
   if (options.persistent === undefined) options.persistent = true;
   if (options.recursive === undefined) options.recursive = false;
@@ -5116,7 +5131,6 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">watchFile = function (filename, options, listener) {
-  handleError((filename = getPathFromURL(filename)));
   nullCheck(filename);
   filename = pathModule.resolve(filename);
   var stat;
@@ -5172,17 +5186,13 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
   var req = new FSReqWrap();
   req.oncomplete = wrapper;
 
-  if (isUint8Array(buffer)) {
-    callback = maybeCallback(callback || position || length || offset);
-    if (typeof offset !== &#x27;number&#x27;) {
-      offset = 0;
-    }
-    if (typeof length !== &#x27;number&#x27;) {
-      length = buffer.length - offset;
-    }
-    if (typeof position !== &#x27;number&#x27;) {
+  if (buffer instanceof Buffer) {
+    // if no position is passed then assume null
+    if (typeof position === &#x27;function&#x27;) {
+      callback = position;
       position = null;
     }
+    callback = maybeCallback(callback);
     return binding.writeBuffer(fd, buffer, offset, length, position, req);
   }
 
@@ -5243,13 +5253,21 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">writeFileSync = function (path, data, options) {
-  options = getOptions(options, { encoding: &#x27;utf8&#x27;, mode: 0o666, flag: &#x27;w&#x27; });
-  const flag = options.flag || &#x27;w&#x27;;
+  if (!options) {
+    options = { encoding: &#x27;utf8&#x27;, mode: 0o666, flag: &#x27;w&#x27; };
+  } else if (typeof options === &#x27;string&#x27;) {
+    options = { encoding: options, mode: 0o666, flag: &#x27;w&#x27; };
+  } else if (typeof options !== &#x27;object&#x27;) {
+    throwOptionsError(options);
+  }
 
+  assertEncoding(options.encoding);
+
+  var flag = options.flag || &#x27;w&#x27;;
   var isUserFd = isFd(path); // file descriptor ownership
   var fd = isUserFd ? path : fs.openSync(path, flag, options.mode);
 
-  if (!isUint8Array(data)) {
+  if (!(data instanceof Buffer)) {
     data = Buffer.from(&#x27;&#x27; + data, options.encoding || &#x27;utf8&#x27;);
   }
   var offset = 0;
@@ -5399,13 +5417,9 @@ to copy a file or a directory whether it has contents, just call `fs.copy(source
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">writeSync = function (fd, buffer, offset, length, position) {
-  if (isUint8Array(buffer)) {
+  if (buffer instanceof Buffer) {
     if (position === undefined)
       position = null;
-    if (typeof offset !== &#x27;number&#x27;)
-      offset = 0;
-    if (typeof length !== &#x27;number&#x27;)
-      length = buffer.length - offset;
     return binding.writeBuffer(fd, buffer, offset, length, position);
   }
   if (typeof buffer !== &#x27;string&#x27;)
